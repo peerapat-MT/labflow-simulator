@@ -1,0 +1,12 @@
+node_modules/
+.qa/
+*.tar.gz
+__pycache__/
+
+.env
+.env.*
+.openai/
+social-video/work/
+*.mp4
+*.ivf
+*.wav
