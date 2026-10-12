@@ -10,3 +10,5 @@ social-video/work/
 *.mp4
 *.ivf
 *.wav
+social-video/intermediates/
+social-video/deliverables/
