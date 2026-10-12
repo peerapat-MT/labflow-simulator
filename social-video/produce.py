@@ -45,6 +45,7 @@ def capture():
   browser=p.chromium.launch(headless=True,args=['--use-angle=swiftshader','--enable-unsafe-swiftshader','--disable-web-security'])
   page=browser.new_page(viewport={'width':1024,'height':1024},device_scale_factor=1,accept_downloads=True)
   page.on('pageerror',lambda e:errors.append(str(e)))
+  page.on('console',lambda m:print(m.text,flush=True) if m.text.startswith('LABFLOW_FRAME') else None)
   page.goto('http://127.0.0.1:4175/scene.html');page.wait_for_load_state('networkidle');page.wait_for_function('window.ready===true')
   page.screenshot(path=str(WORK/'scene-inspection.png'))
   print('Scene ready',page.evaluate('world.getStats()'),flush=True)
