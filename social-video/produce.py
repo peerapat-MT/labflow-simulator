@@ -59,7 +59,8 @@ def capture():
    page.set_viewport_size({'width':w,'height':h})
    for i,ch in enumerate(CHAPTERS):
     (HERE/'overlay.html').write_text(overlay(ch,portrait),encoding='utf-8')
-    page.goto('http://127.0.0.1:4175/overlay.html');page.wait_for_load_state('networkidle');page.evaluate('document.fonts.ready')
+    page.goto(f'http://127.0.0.1:4175/overlay.html?chapter={fmt}-{i}');page.wait_for_load_state('networkidle');page.evaluate('document.fonts.ready')
+    assert page.locator('.eyebrow').inner_text()==ch[2], 'Caption chapter did not refresh'
     page.screenshot(path=str(WORK/f'{fmt}-{i}.png'))
   browser.close()
  server.shutdown();(WORK/'browser-errors.json').write_text(json.dumps(errors),encoding='utf-8')
