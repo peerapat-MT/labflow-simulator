@@ -1,0 +1,151 @@
+{
+  "generator": "scripts/create_lab_assets.py",
+  "blender_version": "4.5.4 LTS",
+  "blender_build_hash": "b3efe983cc58",
+  "license": "Original procedural assets created for this LabFlow project; no external models or textures.",
+  "coordinates": "glTF/Three.js meters, Y up, floor spans X -12.6..12.6 / Z -8..8; person origin at feet, forward +Z",
+  "environment": {
+    "file": "lab-environment.glb",
+    "source": "lab-environment.blend",
+    "dimensions_m": [
+      25.2,
+      2.1,
+      16.0
+    ],
+    "mesh_nodes": 17,
+    "triangles": 129864,
+    "materials": [
+      "Biohazard and blood tube red",
+      "Brushed stainless steel",
+      "Cabinet | warm ceramic enamel",
+      "Clinical blue",
+      "Cyan equipment trim",
+      "Display cyan illumination",
+      "EDTA lavender caps",
+      "Floor | mineral porcelain",
+      "Frosted blue privacy panel",
+      "Instrument dark polymer",
+      "Instrument display glass",
+      "Paper and labels",
+      "Plant leaves",
+      "Serum gold caps",
+      "Status green illumination",
+      "Tile joints",
+      "Worktop | solid surface"
+    ],
+    "nodes": [
+      "Lab_Cabinet",
+      "Lab_Floor",
+      "Lab_Tile_joints",
+      "Lab_Cyan_equipment_trim",
+      "Lab_Frosted_blue_privacy_panel",
+      "Lab_Brushed_stainless_steel",
+      "Lab_Instrument_dark_polymer",
+      "Lab_Instrument_display_glass",
+      "Lab_Display_cyan_illumination",
+      "Lab_Status_green_illumination",
+      "Lab_Clinical_blue",
+      "Lab_Plant_leaves",
+      "Lab_Serum_gold_caps",
+      "Lab_Biohazard_and_blood_tube_red",
+      "Lab_EDTA_lavender_caps",
+      "Lab_Paper_and_labels",
+      "Lab_Worktop"
+    ]
+  },
+  "person": {
+    "file": "lab-person.glb",
+    "source": "lab-person.blend",
+    "height_m": 1.717,
+    "walk_pivots": [
+      "leftArm",
+      "rightArm",
+      "leftLeg",
+      "rightLeg",
+      "leftKnee",
+      "rightKnee"
+    ],
+    "tint_materials": [
+      "Scrubs",
+      "Skin",
+      "Trousers",
+      "Hair",
+      "Shoe"
+    ],
+    "mesh_nodes": 18,
+    "triangles": 8240,
+    "materials": [
+      "Badge and eyes",
+      "Eye pupil",
+      "Hair",
+      "Scrubs",
+      "Shoe",
+      "Skin",
+      "Trousers"
+    ],
+    "nodes": [
+      "Lab_Scrubs",
+      "Lab_Skin",
+      "Lab_Badge_and_eyes",
+      "Lab_Hair",
+      "Lab_Eye_pupil",
+      "Lab_Trousers",
+      "leftArm",
+      "leftArm_Scrubs",
+      "leftArm_Skin",
+      "leftLeg",
+      "leftLeg_Trousers",
+      "leftKnee",
+      "leftKnee_Trousers",
+      "leftKnee_Shoe",
+      "leftKnee_Eye_pupil",
+      "rightArm",
+      "rightArm_Scrubs",
+      "rightArm_Skin",
+      "rightLeg",
+      "rightLeg_Trousers",
+      "rightKnee",
+      "rightKnee_Trousers",
+      "rightKnee_Shoe",
+      "rightKnee_Eye_pupil"
+    ],
+    "validation": {
+      "glb_header_valid": true,
+      "articulation_world_positions_m": {
+        "leftLeg": [
+          -0.1,
+          0.9,
+          -0.003
+        ],
+        "leftKnee": [
+          -0.103,
+          0.475,
+          -0.005
+        ],
+        "leftArm": [
+          -0.235,
+          1.32,
+          0
+        ],
+        "rightLeg": [
+          0.1,
+          0.9,
+          -0.003
+        ],
+        "rightKnee": [
+          0.103,
+          0.475,
+          -0.005
+        ],
+        "rightArm": [
+          0.235,
+          1.32,
+          0
+        ]
+      }
+    }
+  },
+  "rendering": "Opaque PBR materials with beveled edges and weighted normals. Frosted panels are opaque to avoid transparency sorting. Runtime supplies lighting, shadows, environment map, dynamic entities, signage and tube route.",
+  "build": "Official Blender 4.5.4 LTS portable, run blender --background --python scripts/create_lab_assets.py from project root",
+  "source_archive_sha256": "0de55df1d99e4e7152605022cb648e795d5d49209c5c5c4889e1a19fb401a054"
+}
